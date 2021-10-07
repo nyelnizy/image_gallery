@@ -22,9 +22,8 @@ class GalleryView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Container(
-      color: Colors.transparent,
-      child: Padding(
+    return Scaffold(
+      body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: GridView.builder(
             itemCount: imageUrlList.length,
