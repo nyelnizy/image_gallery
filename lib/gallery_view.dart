@@ -23,6 +23,7 @@ class GalleryView extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
+       backgroundColor: Colors.transparent,
       body: Padding(
         padding: const EdgeInsets.all(0.0),
         child: GridView.builder(
