@@ -47,6 +47,7 @@ class GalleryView extends StatelessWidget {
                           fullscreenDialog: true));
                 },
                 child: Container(
+                  color: Colors.transparent,
                   child: Hero(
                       tag: "photo$index",
                       child: CachedNetworkImage(
