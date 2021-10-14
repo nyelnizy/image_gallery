@@ -24,7 +24,7 @@ class GalleryView extends StatelessWidget {
     // TODO: implement build
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(0.0),
         child: GridView.builder(
             itemCount: imageUrlList.length,
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
