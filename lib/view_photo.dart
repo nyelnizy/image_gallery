@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:photo_view/photo_view.dart';
 import 'package:photo_view/photo_view_gallery.dart';
@@ -7,15 +6,18 @@ class ViewPhotos extends StatefulWidget {
   final String heroTitle;
   final imageIndex;
   final List<dynamic> imageList;
-  ViewPhotos({this.imageIndex, this.imageList, this.heroTitle = "img"});
+
+  ViewPhotos(
+      {this.imageIndex, required this.imageList, this.heroTitle = "img"});
 
   @override
   _ViewPhotosState createState() => _ViewPhotosState();
 }
 
 class _ViewPhotosState extends State<ViewPhotos> {
-  PageController pageController;
-  int currentIndex;
+  PageController? pageController;
+  int currentIndex = 0;
+
   @override
   void initState() {
     // TODO: implement initState
@@ -77,7 +79,7 @@ class _ViewPhotosState extends State<ViewPhotos> {
                   value: progress == null
                       ? null
                       : progress.cumulativeBytesLoaded /
-                          progress.expectedTotalBytes,
+                          progress.expectedTotalBytes!,
                 ),
               ),
             ),
